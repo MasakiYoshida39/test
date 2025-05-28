@@ -3,8 +3,13 @@ package test;
 public class test {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
-		System.out.print(false);
+		int integer;
+		integer = 2;
+		
+		/* integer = 3.2; 暗黙の型変換が出来ないのでエラーになる*/
+		
+		System.out.println(integer);
+		System.out.println(false);
 	}
 
 }
