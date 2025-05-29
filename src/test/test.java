@@ -11,7 +11,10 @@ public class test {
 		 * */
 		
 		System.out.println(integer);
-		System.out.println(false);
+		//３aaa
+		System.out.println(1+2+"aaa");
+		//aaa12
+		System.out.println("aaa"+1+2);
 	}
 
 }

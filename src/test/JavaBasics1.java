@@ -11,8 +11,10 @@ public class JavaBasics1 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
         System.out.println(str);
+    	/* 数値を入力する場合
         int num = Integer.parseInt(str);
         System.out.println(num);
+        ]*/
     }
 }
 //scannerでも同じコード作成可能
