@@ -6,7 +6,9 @@ public class test {
 		int integer;
 		integer = 2;
 		
-		/* integer = 3.2; 暗黙の型変換が出来ないのでエラーになる*/
+		/* integer = 3.2; 暗黙の型変換が出来ないのでエラーになる
+		 double　OR　floatにする　よく間違える
+		 * */
 		
 		System.out.println(integer);
 		System.out.println(false);
