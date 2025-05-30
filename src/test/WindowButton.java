@@ -1,54 +1,57 @@
 package test;
 
-import java.awt.Color;
-import java.awt.Font;
+import java.awt.Button;
 import java.awt.Frame;
-import java.awt.Label;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class WindowButton {
 
+//Frame を継承したクラス
+public class WindowButton extends Frame{
+	
+	private Button bt;
+	
 	public static void main(String[] args) {
-		        Sample1 sm = new Sample1();
+		WindowButton sm = new WindowButton ();
 		    }
-		}
-
-		// Frame を継承したクラス
-		class Sample1 extends Frame {
-		    // フィールドとして宣言（←これが必要）
-		    private Label lb;
-
-		    
-		    public Sample1() {
-		    	//ウィンドウのタイトル
-		        super("test");
-		        
-		        //ラベルの作成
-		        lb = new Label("sam");
-		        //ラベルの表示
-		        add(lb);
-		        
-		        //文字色を変更
-		        lb.setForeground(Color.blue);
-		        //"serif"：フォントの種類（書体）　Font.BOLD：フォントのスタイル　34：フォントサイズ（ピクセル）
-		        lb.setFont(new Font("serif",Font.BOLD,34));
-		        
-		        
-		        addWindowListener(new SampleWindowListener());
-		        //ウィンドウのサイズと表示
-		        setSize(250, 200);
-		        setVisible(true);
-		    }
-
-		    // ウィンドウクローズ処理
-		    class SampleWindowListener extends WindowAdapter {
-		    	// ウィンドウを閉じる
-		        public void windowClosing(WindowEvent e) {
-		            System.exit(0);
-		        }
-		    }
-
+	
+	
+	
+	public WindowButton() {
+    	//ウィンドウのタイトル
+    	super("test");
+        
+        //ボタンの作成
+        bt = new Button("sam");
+        //ボタンの追加
+        add(bt);
+        
+        addWindowListener(new SampleWindowListener());
+        //イベントを受け取る
+        bt.addActionListener(new SampleActionListener());
+        
+      //ウィンドウのサイズと表示
+        setSize(250, 200);
+        setVisible(true);
 	}
+
+
+    // ウィンドウクローズ処理
+    class SampleWindowListener extends WindowAdapter {
+    	// ウィンドウを閉じる
+        public void windowClosing(WindowEvent e) {
+            System.exit(0);
+        }
+    }
+    //イベントを処理する。
+    class SampleActionListener implements ActionListener{
+    	//イベントが発生したら呼びだされる処理
+    	public void actionPerformed(ActionEvent e) {
+    		bt.setLabel("OK");
+    	}
+    }
+}
 
 
