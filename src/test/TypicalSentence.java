@@ -7,5 +7,8 @@ public class TypicalSentence {
 	
 	/* コメント */
 	// 
+	//インデントを合わせる方法
+	//Mac command+i
+	//Windows Ctrl + i（試してないので定かでは無い）
 	
 }
